@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Remove Element</title>
+</head>
+<body>
+    <div id="parent">
+        <p id="para1">Para 1</p>
+        <p class="para2">Para 2</p>
+        <p>Para 3</p>
+        <p>Para 4</p>
+        <p>Para 5</p>
+    </div>
+
+    <script>
+        // Truy cập vào các phần tử
+        const para1 = document.getElementById('para1');
+        const para2 = document.querySelector('.para2');
+        const parent = document.getElementById('parent');
+
+        // Remove phần tử
+        // Remove para1, para2 trong parent
+        parent.removeChild(para1);
+        parent.removeChild(para2);
+
+        // Xóa para3 sử dụng parentNode mà không cần phải truy cập trực tiếp vào phần tử cha
+        const para3 = document.querySelector('#parent p:nth-child(1)');
+        para3.parentNode.removeChild(para3);
+    </script>
+</body>
+</html>

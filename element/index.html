@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+</head>
+<body>
+    
+    <p id="para">Thẻ đoạn văn 1</p>
+    <p class="text">Thẻ đoạn văn 2</p>
+    <p class="text">Thẻ đoạn văn 3</p>
+    <p>Thẻ đoạn văn 4</p>
+    <p>Thẻ đoạn văn 5</p>
+
+    <script>
+        // Element
+        const para = document.getElementById('para')
+        console.log(para);
+        para.style.color = 'red';
+
+        //HTML collection
+        const texts = document.getElementsByClassName('text');
+        console.log(texts[0]);
+
+         //HTML collection
+        const p = document.getElementsByTagName('p');
+        console.log(p);
+
+        // Element đầu tiên tìm thấy
+        const para1 = document.querySelector('#para');
+        console.log(para1);
+
+        const para2 = document.querySelector('.text');
+        console.log(para2);
+
+        const para3 = document.querySelector('p');
+        console.log(para3);
+
+        const para4 = document.querySelector('p:nth-child(5)');
+        console.log(para4);
+
+        const texts1 = document.querySelectorAll('.text');
+        console.log(texts1[0]);
+    </script>
+</body>
+</html>

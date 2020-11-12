@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+</head>
+<body>
+    <h1 id="heading">Quan hệ giữa các node trong DOM</h1>
+    <div class="content">
+        <p>para 1</p>
+        <p>para 2</p>
+    </div>
+
+    <script>
+        let content = document.querySelector('.content');
+        console.log(content);
+        console.log(content.parentNode);
+        console.log(content.childNodes);
+        console.log(content.children);
+        console.log(content.previousSibling);
+    </script>
+</body>
+</html>

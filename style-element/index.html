@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Style Element</title>
+</head>
+<body>
+    <h1 class="heading">Thẻ heading</h1>
+    <p class="para">Đây là thẻ para 1</p>
+
+    <script>
+        // Thay đổi style của element bằng javascript
+        // VD: Thay đổi màu chữ của thẻ h1 thành màu đỏ
+        const h1 = document.querySelector('.heading');
+        h1.style.color = 'red';
+
+         // VD: Thay đổi màu chữ của thẻ p thành màu xanh và có font-size 32px
+        const para = document.querySelector('.para');
+        para.style.color = 'green';
+        para.style.fontSize = '32px';
+
+        // Chú ý: Khi property có 2 từ trở lên cần viết theo dạng camelCase
+        // Ví dụ: backgroundColor, marginLeft, paddingLeft,…
+
+    </script>
+</body>
+</html>

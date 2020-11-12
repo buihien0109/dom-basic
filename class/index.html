@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Class List</title>
+    <style>
+        .text-red {
+            color: red;
+        }
+        .text-bold {
+            font-weight: bold;
+        }
+        .text-big {
+            font-size: 40px;
+        }
+        .text-center {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h1 id="para" class="text-red text-center">Truy cập phần tử DOM</h1>
+
+
+    <script>
+        // Truy cập vào phần tử có id="para"
+        const para = document.getElementById('para');
+        // Xem danh sách của phần tử sử dụng thuộc tính "classList"
+        console.log(para.classList);
+
+        // Thêm class : có thể thêm 1 hoặc nhiều class
+        para.classList.add("text-big");
+        para.classList.add("text-big", "text-bold");
+
+        // remove class : có thể remove 1 hoặc nhiều class
+        // para.classList.remove("text-big");
+        para.classList.remove("text-big", "text-bold");
+
+        // contains => true / false : Kiểm tra class có nằm trong phần tử hay không
+        console.log(para.classList.contains('text-red'));
+        console.log(para.classList.contains('text-big'));
+
+        // toggle
+        // Cứ mỗi 2s sẽ toggle class "text-big"
+        setTimeout(function() {
+            para.classList.toggle('text-big');
+        },2000)
+    
+    </script>
+</body>
+</html>

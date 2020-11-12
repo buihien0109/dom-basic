@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Handle Event</title>
+</head>
+<body>
+
+    <button onclick="sayHello()">HTML-attribute</button>
+    <button id="btn1">DOM property</button>
+    <button id="btn2">addEventListener</button>
+
+    <script>
+        // Sử dụng HTML-attribute
+        function sayHello() {
+            console.log('Xin chào các bạn');
+        }
+
+        // Sử dụng DOM property
+        let btn1 = document.getElementById('btn1');
+        btn1.onclick = function() {
+            console.log('Xin chào các bạn');
+        }
+
+        // Sử dụng addEventListener
+        // Cần truyền vào 2 tham số : tên sự kiện, function để xử lý sự kiện
+        let btn2 = document.getElementById('btn2');
+        btn2.addEventListener('click', function() {
+            console.log('Xin chào các bạn');
+        })
+
+
+    </script>
+</body>
+</html>

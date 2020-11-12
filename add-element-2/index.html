@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add element DOM</title>
+</head>
+<body>
+    
+    <h1 id="text">Xin chào các bạn</h1>
+
+    <div class="box">
+        <p>Box item</p>
+    </div>
+
+    <script>
+        // const para = document.createElement('p');
+        // para.innerText = "New para 1";
+
+        const h1 = document.getElementById('text');
+        // h1.insertAdjacentElement('afterend', para);
+
+        h1.insertAdjacentHTML('beforeend', '<p>New para 1</p>');
+    </script>
+</body>
+</html>

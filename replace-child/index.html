@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Replace</title>
+</head>
+<body>
+    
+    <div id="parent">
+        <p id="child">Thay thế phần tử trong JS DOM</p>
+    </div>
+
+    <script>
+        // Truy cập vào phần tử có id="parent"
+        const parent = document.getElementById('parent');
+        // Truy cập vào phần tử có id="child"
+        const child = document.getElementById('child');
+
+        // Tạo thẻ mới và thêm nội dung cho thẻ
+        let newElement = document.createElement('h1');
+        newElement.innerText = "Xin chào các bạn";
+
+        
+        // Thay thế sử dụng method parent.replaceChild(newElement, child);
+        child.parentNode.replaceChild(newElement, child);
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add element DOM</title>
+</head>
+<body>
+    
+    <h1 id="text">Xin chào các bạn</h1>
+
+    <div class="box">
+        <p>Box item</p>
+    </div>
+
+    <script>
+        // prepend
+        // Tạo thẻ p và thêm nội dung cho thẻ
+        const para = document.createElement('p');
+        para.innerText = "New para 1";
+        // Thêm para vào vị trí đầu tiên của body
+        document.body.prepend(para);
+
+        // appendChild
+        // Tạo thẻ p và thêm nội dung cho thẻ
+        const para2 = document.createElement('p');
+        para2.innerText = "New para 2";
+        // Thêm para vào vị trí cuối cùng của body
+        document.body.appendChild(para2);
+
+        // insertBefore()
+        // Tạo thẻ h2 và thêm nội dung cho thẻ
+        const heading = document.createElement('h2');
+        heading.innerText = "Các bạn có khỏe không?";
+
+        // Truy cập vào thẻ có class "box"
+        const box = document.querySelector('.box');
+        
+        // insert heading vào trước box
+        document.body.insertBefore(heading, box);
+    </script>
+</body>
+</html>
